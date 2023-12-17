@@ -1,0 +1,80 @@
+{
+  // Configuration for JavaScript files
+  "extends": [
+    "airbnb-base",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "endOfLine": "auto"
+      }
+    ]
+  },
+  "overrides": [
+    // Configuration for TypeScript files
+    {
+      "files": [
+        "**/*.ts",
+        "**/*.tsx"
+      ],
+      "plugins": [
+        "@typescript-eslint",
+        "unused-imports"
+      ],
+      "extends": [
+        "airbnb-typescript",
+        "plugin:prettier/recommended"
+      ],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+            "singleQuote": true,
+            "endOfLine": "auto"
+          }
+        ],
+        "react/destructuring-assignment": "off", // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
+        "react/require-default-props": "off", // Allow non-defined react props as undefined
+        "import/order": "off", // disable import order
+        "@typescript-eslint/comma-dangle": "off", // Avoid conflict rule between Eslint and Prettier
+        "import/prefer-default-export": "off", // Named export is easier to refactor automatically
+        "@typescript-eslint/no-unused-vars": "off",
+        "no-restricted-exports": "off", // allow export { default } from 'path';
+        "no-empty-pattern": "off", // alow empty {}
+        "no-multi-str": "off",
+        "no-param-reassign": "off",
+        "unused-imports/no-unused-imports": "error",
+        "react/jsx-filename-extension": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/jsx-boolean-value": "off",
+        "react/prop-types": "off",
+        "react/no-unescaped-entities": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "react/jsx-wrap-multilines": "off",
+        "react/no-array-index-key": "off",
+        "react/jsx-curly-newline": "off",
+        "no-underscore-dangle": "off",
+        "no-unused-vars": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/naming-convention": "off",
+        "import/no-cycle": "off",
+        "@typescript-eslint/no-shadow": "off",
+        "@typescript-eslint/indent": "off",
+        "class-methods-use-this": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-unused-expressions": "off",
+        "unused-imports/no-unused-vars": "off",
+        "prefer-regex-literals": "off",
+        "@typescript-eslint/default-param-last": "off"
+      }
+    }
+  ]
+}

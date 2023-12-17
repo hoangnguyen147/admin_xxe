@@ -1,0 +1,18 @@
+export const PATH_NAME = {
+  ROOT: '/',
+  ERROR_404: '/404',
+  ERROR_403: '/403',
+  DASHBOARD: '/dashboard',
+  PLAY_BACKGROUND: '/playbackground',
+  LOGIN: '/login',
+  POST: '/post',
+  POST_LIST: '/post/list',
+  POST_ADD: '/post/add',
+  SHARING: '/sharing',
+  SHARING_LIST: '/sharing/list',
+  SHARING_ADD: '/sharing/add',
+  USER: '/user',
+  USER_ADD: '/user/add',
+  USER_LIST: '/user/list',
+  DEMO: '/demo',
+};
